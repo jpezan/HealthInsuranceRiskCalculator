@@ -164,7 +164,7 @@ body {
         var kg=parseInt(document.getElementById('weight').selectedOptions[0].value)/2.2046;
         var meters=(parseInt(document.getElementById('heightft').selectedOptions[0].value)+parseInt(document.getElementById('heightin').selectedOptions[0].value))/39.37;
         var bmi=(kg/(meters**2));
-	    bmi=Math.floor(x*100)/100;
+	    bmi=Math.floor(bmi*100)/100;
 	    alert(bmi.toFixed(2));
 
         points+=parseInt(document.getElementById('diabetes').selectedOptions[0].value);
