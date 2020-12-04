@@ -173,27 +173,27 @@ body {
             points+=0
         }
         else if (bmi<=29.9){
-            point+=30
+            points+=30
         }
         else{
             points+=75
         }
         if (points<=20){
-            riskLevel='<h2 style=\'color:green\'>Low Risk</h2>';
+            riskLevel='<h5 style=\'color:green\'>Low Risk</h5>';
         }
         else if (points<=50){
-            riskLevel='<h2 style=\'color:yellow\'>Moderate Risk</h2>';
+            riskLevel='<h5 style=\'color:yellow\'>Moderate Risk</h5>';
         }
         else if (points<=75){
-            riskLevel='<h2 style=\'color:orange\'>High Risk</h2>';
+            riskLevel='<h5 style=\'color:orange\'>High Risk</h5>';
         }
         else {
-            riskLevel='<h2 style=\'color:red\'>Uninsurable</h2>';
+            riskLevel='<h5 style=\'color:red\'>Uninsurable</h5>';
         }
 
-        let result='<h2>Patient Risk Level:'+riskLevel+'</h2>';
+        let result='<h5>Patient Risk Level:'+riskLevel+'</h5>';
 
-        document.getElementById('output').innerHTML=result+'<br />'+points+'<br \>'+bmi;
+        document.getElementById('output').innerHTML=result+'<h5><br />'+points+'<h5><br />'+bmi;
 
     }    
 
