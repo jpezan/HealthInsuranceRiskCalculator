@@ -165,7 +165,6 @@ body {
         var meters=(parseInt(document.getElementById('heightft').selectedOptions[0].value)+parseInt(document.getElementById('heightin').selectedOptions[0].value))/39.37;
         var bmi=(kg/(meters**2));
 	    bmi=Math.floor(bmi*100)/100;
-	    alert(bmi.toFixed(2));
 
         points+=parseInt(document.getElementById('diabetes').selectedOptions[0].value);
         points+=parseInt(document.getElementById('cancer').selectedOptions[0].value);
@@ -196,6 +195,7 @@ body {
         let result='<h3>Risk Summary'+riskLevel+'</h3>';
 
         document.getElementById('output').innerHTML=result+'<h5><br />'+'Point Totals: '+points+'<br />'+'BMI: '+bmi+'</h5>';
+	    alert(bmi.toFixed(2));
 
     }    
 
