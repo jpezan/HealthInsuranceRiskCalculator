@@ -1,15 +1,10 @@
-<!--Jacqueline Pezan>
-<Scrum 7>
-<Lewis Univeristy - Intro to Computer Science>
-<Email: jacquelinempezan@lewisu.edu>
-<Instructur: Eric Pogue>
-<Assignment: Health Insurance Risk Calculator Web - JP-->
-
 <!DOCTYPE html>
 <html>
 <style>
 body {
-  background-color: rgb(200,0,100);
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 </style>
 <head>
@@ -198,8 +193,8 @@ body {
     <body>
 
         <br /><br /><br />
-    <button onClick = "calculateAgain()">Calculate Risk Again</button>
-        <p id="output2"></p>
+    <button onclick = "calculateAgain()">Calculate Risk Again</button>
+        <p id="output"></p>
 
         </body>
 
@@ -245,7 +240,7 @@ body {
 
         let result='<h2>Patient Risk Level:'+riskLevel+'</h2>';
 
-        document.getElementById('ouput2').innerHTML=result+'<br />'+points+'<br \>'+bmi;
+        document.getElementById('ouput').innerHTML=result+'<br />'+points+'<br \>'+bmi;
 
     }    
 
@@ -253,3 +248,4 @@ body {
     </body>
     </html>
 
+    
