@@ -1,3 +1,10 @@
+<!--Jacqueline Pezan>
+<Scrum 7>
+<Lewis Univeristy - Intro to Computer Science>
+<Email: jacquelinempezan@lewisu.edu>
+<Instructur: Eric Pogue>
+<Assignment: Health Insurance Risk Calculator Web - JP-->
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -187,60 +194,6 @@ body {
         let result='<h2>Patient Risk Level:'+riskLevel+'</h2>';
 
         document.getElementById('output').innerHTML=result+'<br />'+points+'<br \>'+bmi;
-    }
-    </script>
-
-    <body>
-
-        <br /><br /><br />
-    <button onclick = "calculateAgain()">Calculate Risk Again</button>
-        <p id="output"></p>
-
-        </body>
-
-        <script>
-    console.log("Starting Risk Calculator...");
-
-    function calculateRisk() {
-        console.log("calculateAgain()"); 
-        
-        var riskLevel='';
-        var points=0;
-        points+=parseInt(document.getElementById('age').selectedOptions[0].value);
-        points+=parseInt(document.getElementById('bp').selectedOptions[0].value);
-        var kg=parseInt(document.getElementById('weight').selectedOptions[0].value)/2.2046;
-        var meters=(parseInt(document.getElementById('heightft').selectedOptions[0].value)+parseInt(document.getElementById('heightin').selectedOptions[0].value))/39.37;
-        var bmi=(kg/(meters**2));
-
-        points+=parseInt(document.getElementById('diabetes').selectedOptions[0].value);
-        points+=parseInt(document.getElementById('cancer').selectedOptions[0].value);
-        points+=parseInt(document.getElementById('alz').selectedOptions[0].value);
-
-        if (bmi<=24.9){
-            points+=0
-        }
-        else if (bmi<=29.9){
-            point+=30
-        }
-        else{
-            points+=75
-        }
-        if (points<=20){
-            riskLevel='<h2 style=\'color:green\'>Low Risk</h2>';
-        }
-        else if (points<=50){
-            riskLevel='<h2 style=\'color:yellow\'>Moderate Risk</h2>';
-        }
-        else if (points<=75){
-            riskLevel='<h2 style=\'color:orange\'>High Risk</h2>';
-        }
-        else {
-            riskLevel='<h2 style=\'color:red\'>Uninsurable</h2>';
-        }
-
-        let result='<h2>Patient Risk Level:'+riskLevel+'</h2>';
-
-        document.getElementById('ouput').innerHTML=result+'<br />'+points+'<br \>'+bmi;
 
     }    
 
