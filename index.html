@@ -164,18 +164,17 @@ body {
         var kg=parseInt(document.getElementById('weight').selectedOptions[0].value)/2.2046;
         var meters=(parseInt(document.getElementById('heightft').selectedOptions[0].value)+parseInt(document.getElementById('heightin').selectedOptions[0].value))/39.37;
         var bmi=(kg/(meters**2));
-	    var bmi2=bmi
-	    bmi2=Math.floor(x*100)/100;
-	    alert(bmi2.toFixed(2));
+	    bmi=Math.floor(x*100)/100;
+	    alert(bmi.toFixed(2));
 
         points+=parseInt(document.getElementById('diabetes').selectedOptions[0].value);
         points+=parseInt(document.getElementById('cancer').selectedOptions[0].value);
         points+=parseInt(document.getElementById('alz').selectedOptions[0].value);
 
-        if (bmi2<=24.9){
+        if (bmi<=24.9){
             points+=0
         }
-        else if (bmi2<=29.9){
+        else if (bmi<=29.9){
             points+=30
         }
         else{
@@ -196,7 +195,7 @@ body {
 
         let result='<h3>Risk Summary'+riskLevel+'</h3>';
 
-        document.getElementById('output').innerHTML=result+'<h5><br />'+'Point Totals: '+points+'<br />'+'BMI: '+bmi2+'</h5>';
+        document.getElementById('output').innerHTML=result+'<h5><br />'+'Point Totals: '+points+'<br />'+'BMI: '+bmi+'</h5>';
 
     }    
 
