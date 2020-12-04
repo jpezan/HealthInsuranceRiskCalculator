@@ -22,7 +22,7 @@ body {
 <!--Drop Down Options-->
     <p style='color:white'/p>
     <label>Please select the patient's age range:</label><br />
-    <select id="age">
+    <select id='age'>
         <option value='0'>Under 30</option>
         <option value='10'>30-45</option>
         <option value='20'>46-60</option>
@@ -52,7 +52,7 @@ body {
     <select id='heightin'>
         <option value='0'>0</option>
         <option value='1'>1</option>
-        <option value='2'>2's</option>
+        <option value='2'>2</option>
         <option value='3'>3</option>
         <option value='4'>4</option>
         <option value='5'>5</option>
@@ -139,7 +139,7 @@ body {
     <!--To calculate Risk-->
     <br /><br /><br />
     <button onclick = "calculateRisk()">Coverage Risk:</button>
-        <p id = "output"></p>
+        <p id="output"></p>
 
     <script>
     console.log("Starting Risk Calculator...");
@@ -151,13 +151,13 @@ body {
         var points=0;
         points+=parseInt(document.getElementById('age').selectedOptions[0].value);
         points+=parseInt(document.getElementById('bp').selectedOptions[0].value);
-        var kg=parseInt(document.getElementById('weight').selectedOptions[0].value)/2.2046
+        var kg=parseInt(document.getElementById('weight').selectedOptions[0].value)/2.2046;
         var meters=(parseInt(document.getElementById('heightft').selectedOptions[0].value)+parseInt(document.getElementById('heightin').selectedOptions[0].value))/39.37;
         var bmi=(kg/(meters**2));
 
         points+=parseInt(document.getElementById('diabetes').selectedOptions[0].value);
         points+=parseInt(document.getElementById('cancer').selectedOptions[0].value);
-        points+=parseInt(document.getElementById('Alzheimer').selectedOptions[0].value);
+        points+=parseInt(document.getElementById('alz').selectedOptions[0].value);
 
         if (bmi<=24.9){
             points+=0
@@ -171,10 +171,10 @@ body {
         if (points<=20){
             riskLevel='<h2 style=\'color:green\'>Low Risk</h2>';
         }
-        if (points<=50){
+        else if (points<=50){
             riskLevel='<h2 style=\'color:yellow\'>Moderate Risk</h2>';
         }
-        if (points<=75){
+        else if (points<=75){
             riskLevel='<h2 style=\'color:orange\'>High Risk</h2>';
         }
         else {
@@ -191,5 +191,3 @@ body {
     </script>
     </body>
     </html>
-
-    
