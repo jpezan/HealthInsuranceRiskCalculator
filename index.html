@@ -192,17 +192,22 @@ body {
         let result='<h2>Patient Risk Level:'+riskLevel+'</h2>';
 
         document.getElementById('output').innerHTML=result+'<br />'+points+'<br \>'+bmi;
+    }
+    </script>
 
+    <body>
 
         <br /><br /><br />
-    <button onclick = "calculateRisk()">Calculate Again</button>
+    <button onclick = "calculateAgain()">Calculate Risk Again</button>
         <p id="output"></p>
+
+        </body>
 
         <script>
     console.log("Starting Risk Calculator...");
 
     function calculateRisk() {
-        console.log("calculateRisk()"); 
+        console.log("calculateAgain()"); 
         
         var riskLevel='';
         var points=0;
@@ -240,7 +245,7 @@ body {
 
         let result='<h2>Patient Risk Level:'+riskLevel+'</h2>';
 
-        document.getElementById('output').innerHTML=result+'<br />'+points+'<br \>'+bmi;
+        document.getElementById('ouput').innerHTML=result+'<br />'+points+'<br \>'+bmi;
 
     }    
 
@@ -248,4 +253,3 @@ body {
     </body>
     </html>
 
-    
